@@ -119,7 +119,13 @@ public class Inventory
      */
     public ItemStack findMatchingItemStack(ItemStack key)
     {
-        // Add the necessary sequential search loop
+        for(ItemStack item : slots)
+        {
+            if(item.getItem().equals(key.getItem()))
+            {
+                return item.getItem();
+            }
+        }
 
         return null;
     }
