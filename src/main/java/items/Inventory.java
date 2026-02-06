@@ -145,6 +145,7 @@ public class Inventory
         // Use the appendNode/add logic from Review 1 as your starting point
         // Once we reach this function... we know that `toAdd` must be stored
 
+        // Begin quoted code from Assignment 1 Review Panopto Video
         // First Node
         if (this.slots.head == null) {
             this.slots.head = newNode;
@@ -159,7 +160,8 @@ public class Inventory
         this.slots.tail = newNode;
 
         this.slots.currentSize++;
-        
+        // End quoted code
+
     }
 
     /**
