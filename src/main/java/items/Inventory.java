@@ -93,7 +93,9 @@ public class Inventory
      */
     public boolean isFull()
     {
-        // Replace the next line
+        if(this.slots.currentSize == totalSlots())
+            return true;
+
         return false;
     }
 
