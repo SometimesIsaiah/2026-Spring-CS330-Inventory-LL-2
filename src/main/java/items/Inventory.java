@@ -120,6 +120,16 @@ public class Inventory
      */
     public ItemStack findMatchingItemStack(ItemStack key)
     {
+        LinkedList.Node<ItemStack> item = this.slots.head;
+
+        while(item != null)
+        {
+            if(item.data.equals(key))
+            {
+                return item.data;
+            }
+            item = item.next;
+        }
         return null;
     }
 
