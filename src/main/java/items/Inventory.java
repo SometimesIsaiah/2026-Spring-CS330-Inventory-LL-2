@@ -30,6 +30,7 @@ public class Inventory
         // lhs needs to have items added to it.
         // rhs's size is needed
         // lhs.????(rhs.????)
+        lhs.addItems(rhs.size());
     }
 
     /**
@@ -93,7 +94,7 @@ public class Inventory
      */
     public boolean isFull()
     {
-        if(this.slots.currentSize == totalSlots())
+        if(this.slots.currentSize == capacity)
             return true;
 
         return false;
@@ -119,14 +120,6 @@ public class Inventory
      */
     public ItemStack findMatchingItemStack(ItemStack key)
     {
-        for(ItemStack item : slots)
-        {
-            if(item.getItem().equals(key.getItem()))
-            {
-                return item.getItem();
-            }
-        }
-
         return null;
     }
 
